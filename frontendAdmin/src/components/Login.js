@@ -40,6 +40,7 @@ const Login = () => {
 										type="email"
 										className="form-control "
 										placeholder="Email"
+										required
 										name="email"
 										value={email}
 										onChange={handleChange}

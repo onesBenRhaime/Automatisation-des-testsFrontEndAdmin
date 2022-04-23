@@ -1,18 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./pages/Login";
-import Forget from "./pages/Forget";
+import Login from "./components/Login";
+import Forget from "./components/Forget";
 import Dashboard from "./components/Admin/Dashboard";
 import AddC from "./components/Admin/AddC";
 import AddQ from "./components/Admin/AddQ";
 import ListeQ from "./components/Admin/ListeQ";
 import Contact from "./components/Admin/Contact";
-import Contacts from "./pages/contacts";
+import Contacts from "./components/Admin/contacts";
 import ListeCol from "./components/Admin/ListeCol";
-import Index from "./components/Admin/Index";
+import Home from "./components/Home";
 import Profile from "./components/Admin/Profile";
 import UploadFile from "./components/collaborateur/UploadFile";
-import Log from "./components/Admin/Login.js";
-import Register from "./pages/Register";
+
+import Register from "./components/Register";
 import AuthRoute from "./Utils/AuthRoutes";
 import BaseRoute from "./Utils/BaseRoutes";
 
@@ -21,7 +21,7 @@ function App() {
 		<div class="wrapper">
 			<Router>
 				<Routes>
-					<Route path="/" element={<Index />} />
+					<Route path="/" element={<Home />} />
 					<Route
 						path="/login"
 						element={
@@ -31,7 +31,7 @@ function App() {
 						}
 					/>
 					<Route path="/register" element={<Register />} />
-					<Route path="/p1" element={<Log />} />
+
 					<Route path="/forgetPsw" element={<Forget />} />
 
 					<Route
